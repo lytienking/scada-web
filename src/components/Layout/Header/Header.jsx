@@ -1,13 +1,11 @@
 import { useState } from "react";
 import "./Header.scss";
-import logo1 from '../../../Img/p1.jpg';
 
 export default function Header() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
   return (
     <nav className="navigation">
-      <img src={logo1} alt="logo"/>
       <button
         className="hamburger"
         onClick={() => {
@@ -34,13 +32,13 @@ export default function Header() {
       >
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="/">Scada</a>
           </li>
           <li>
-            <a href="/about">About</a>
+            <a href="/chart">Biểu đồ</a>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <a href="/about">Giới thiệu</a>
           </li>
         </ul>
       </div>
