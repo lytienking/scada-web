@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import scadaApi from '../../../api/scadaApi';
-import { Bar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 const Chart = () => {
     const [benefitsActive, setBenefitsActive] = useState([])
     const [labelData, setLabelData] = useState([])
@@ -12,8 +12,13 @@ const Chart = () => {
             console.log(res);
             const tempArr = res.map(x => x.id);
             const tempLabelArr = res.map(x => x.createdAt);
+            let arr = [];
+            tempLabelArr.forEach(element => {
+                var tempDate = new Date(element);
+                arr.push(tempDate.toLocaleTimeString());
+            });
             setBenefitsActive(tempArr);
-            setLabelData(tempLabelArr);
+            setLabelData(arr);
             
         }, 3000)
         
@@ -26,12 +31,12 @@ const Chart = () => {
     console.log(labelData);
     return (
         <div className="chart">
-        <Bar
+        <Line
           data={{
             labels: labelData,
             datasets: [
               {
-                label: "Theo tháng",
+                label: "Nhiệt độ",
                 data: benefitsActive,
                 backgroundColor: ["rgba(54, 162, 235, 0.2)"],
                 borderColor: ["rgba(255, 159, 64, 1)"],
@@ -42,16 +47,7 @@ const Chart = () => {
           height={400}
           width={500}
           options={{
-            maintainAspectRatio: false,
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true,
-                  },
-                },
-              ],
-            },
+            maintainAspectRatio: false
           }}
         />
       </div>
