@@ -20,9 +20,9 @@ const Home = () => {
       <h1 className="section-title">
         SC<span>A</span>D<span>A</span>
       </h1>
-      <Box sx={{ width: '70%' }}>
+      <Box sx={{ width: '100%'}}>
         <Grid  container>
-          <Grid item xs>
+          <Grid item xs={4}>
             <div className="card-big-shadow">
               <div className="card card-just-text" data-background="color" data-color="yellow" data-radius="none">
                 <div className="content">
@@ -37,9 +37,9 @@ const Home = () => {
               </div>
             </div>
           </Grid>
-          <Grid className='tree-info' item xs={6}>
+          <Grid className='tree-info' item xs={4}>
             <table border="1">
-              <caption>TRẠNG THÁI CÂY TRỒNG</caption>
+              <caption className='cap-table'>TRẠNG THÁI CÂY TRỒNG</caption>
               <tr>
                 <th className='column1'>Màu xanh (%)</th>
                 <th className='column2'>52</th>
@@ -58,7 +58,7 @@ const Home = () => {
               </tr>
             </table>
           </Grid>
-          <Grid item xs>
+          <Grid item xs={4}>
             <div className="card-big-shadow">
               <div className="card card-just-text" data-background="color" data-color="blue" data-radius="none">
                 <div className="content">
@@ -72,6 +72,62 @@ const Home = () => {
                 </div>
               </div>
             </div>
+          </Grid>
+        </Grid>
+      </Box>
+
+      <Box sx={{ width: '100%', marginTop: '100px' }}>
+        <Grid  container>
+        <Grid className='status-info' item xs={4}>
+            <table border="1">
+              <caption className='cap-table'>BIẾN TẦN NHIỆT ĐỘ</caption>
+              <tr>
+                <th className='column1'>Tần số thực</th>
+                <th className='column2'>52</th>
+              </tr>
+              <tr>
+                <th className='column1'>DC BUS</th>
+                <th className='column2'>52</th>
+              </tr>
+              <tr>
+                <th className='column1'>Dòng điện</th>
+                <th className='column2'>52</th>
+              </tr>
+            </table>
+          </Grid>
+          <Grid className='status-info' item xs={4}>
+            <table border="1">
+              <caption className='cap-table'>TRẠNG THÁI KẾT NỐI</caption>
+              <tr>
+                <th className='column1'>Rasp - Rasp</th>
+                <th className='column2'>52</th>
+              </tr>
+              <tr>
+                <th className='column1'>Rasp - Arduino</th>
+                <th className='column2'>52</th>
+              </tr>
+              <tr>
+                <th className='column1'>Rasp - PLC</th>
+                <th className='column2'>52</th>
+              </tr>
+            </table>
+          </Grid>
+          <Grid className='status-info' item xs={4}>
+            <table border="1">
+              <caption className='cap-table'>BIẾN TẦN ĐỘ ẨM</caption>
+              <tr>
+                <th className='column1'>Tần số thực</th>
+                <th className='column2'>52</th>
+              </tr>
+              <tr>
+                <th className='column1'>DC BUS</th>
+                <th className='column2'>52</th>
+              </tr>
+              <tr>
+                <th className='column1'>Dòng điện</th>
+                <th className='column2'>52</th>
+              </tr>
+            </table>
           </Grid>
         </Grid>
       </Box>

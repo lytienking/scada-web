@@ -168,15 +168,9 @@ a:focus {
     margin: 0;
     position: absolute;
     top: 50%;
-    left: 47%;
-    -ms-transform: translate(-50%, -50%);
+    left: 26%;
     transform: translate(-50%, -50%);
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 47%;
-    transform: translate(-50%, -50%);
-    width: 50%;
+    width: 60%;
     height: 60%;
     .column1 {
       width: 40%;
@@ -187,9 +181,31 @@ a:focus {
     }
   }
 }
-
-.css-6gs9hh {
-  width: 100%;
-  margin-left: 15%;
+.status-info{
+  position: relative;
+  table {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 90px;
+    .column1 {
+      width: 40%;
+    }
+    .column2 {
+      width: 60%;
+      text-align: center;
+    }
+  }
+}
+.cap-table{
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+.css-8atqhb {
+  margin-left: 8%;
   margin-right: 15%;
 }

@@ -38,6 +38,9 @@ export default function Header() {
             <a href="/chart">Biểu đồ</a>
           </li>
           <li>
+            <a href="/value">Bảng giá trị</a>
+          </li>
+          <li>
             <a href="/about">Giới thiệu</a>
           </li>
         </ul>
