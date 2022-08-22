@@ -20,8 +20,8 @@ const Home = () => {
       <h1 className="section-title">
         SC<span>A</span>D<span>A</span>
       </h1>
-      <Box >
-        <Grid  container>
+      <Box>
+        <Grid container>
           <Grid item xs={4}>
             <div className="card-big-shadow">
               <div className="card card-just-text" data-background="color" data-color="yellow" data-radius="none">
@@ -37,25 +37,27 @@ const Home = () => {
               </div>
             </div>
           </Grid>
-          <Grid className='tree-info' item xs={4}>
+          <Grid className="tree-info" item xs={4}>
             <table border="1">
-              <caption className='cap-table'>TRẠNG THÁI CÂY TRỒNG</caption>
-              <tr>
-                <th className='column1'>Màu xanh (%)</th>
-                <th className='column2'>52</th>
-              </tr>
-              <tr>
-                <th className='column1'>Màu vàng (%)</th>
-                <th className='column2'>52</th>
-              </tr>
-              <tr>
-                <th className='column1'>Màu đỏ (%)</th>
-                <th className='column2'>52</th>
-              </tr>
-              <tr>
-                <th className='column1'>Chiều cao (mm)</th>
-                <th className='column2'>52</th>
-              </tr>
+              <caption className="cap-table">TRẠNG thÁI CÂY TRỒNG</caption>
+              <tbody>
+                <tr>
+                  <th className="column1">Màu xanh (%)</th>
+                  <th className="column2">52</th>
+                </tr>
+                <tr>
+                  <th className="column1">Màu vàng (%)</th>
+                  <th className="column2">52</th>
+                </tr>
+                <tr>
+                  <th className="column1">Màu đỏ (%)</th>
+                  <th className="column2">52</th>
+                </tr>
+                <tr>
+                  <th className="column1">Chiều cao (mm)</th>
+                  <th className="column2">52</th>
+                </tr>
+              </tbody>
             </table>
           </Grid>
           <Grid item xs={4}>
@@ -77,56 +79,62 @@ const Home = () => {
       </Box>
 
       <Box sx={{ width: '100%', marginTop: '100px' }}>
-        <Grid  container>
-        <Grid className='status-info' item xs={4}>
+        <Grid container>
+          <Grid className="status-info" item xs={4}>
             <table border="1">
-              <caption className='cap-table'>BIẾN TẦN NHIỆT ĐỘ</caption>
-              <tr>
-                <th className='column1'>Tần số thực</th>
-                <th className='column2'>52</th>
-              </tr>
-              <tr>
-                <th className='column1'>DC BUS</th>
-                <th className='column2'>52</th>
-              </tr>
-              <tr>
-                <th className='column1'>Dòng điện</th>
-                <th className='column2'>52</th>
-              </tr>
+              <caption className="cap-table">BIẾN TẦN NHIỆT ĐỘ</caption>
+              <tbody>
+                <tr>
+                  <th className="column1">Tần số thực</th>
+                  <th className="column2">52</th>
+                </tr>
+                <tr>
+                  <th className="column1">DC BUS</th>
+                  <th className="column2">52</th>
+                </tr>
+                <tr>
+                  <th className="column1">Dòng điện</th>
+                  <th className="column2">52</th>
+                </tr>
+              </tbody>
             </table>
           </Grid>
-          <Grid className='status-info' item xs={4}>
+          <Grid className="status-info" item xs={4}>
             <table border="1">
-              <caption className='cap-table'>TRẠNG THÁI KẾT NỐI</caption>
-              <tr>
-                <th className='column1'>Rasp - Rasp</th>
-                <th className='column2'>52</th>
-              </tr>
-              <tr>
-                <th className='column1'>Rasp - Arduino</th>
-                <th className='column2'>52</th>
-              </tr>
-              <tr>
-                <th className='column1'>Rasp - PLC</th>
-                <th className='column2'>52</th>
-              </tr>
+              <caption className="cap-table">TRẠNG THÁI KẾT NỐI</caption>
+              <tbody>
+                <tr>
+                  <th className="column1">Rasp - Rasp</th>
+                  <th className="column2">52</th>
+                </tr>
+                <tr>
+                  <th className="column1">Rasp - Arduino</th>
+                  <th className="column2">52</th>
+                </tr>
+                <tr>
+                  <th className="column1">Rasp - PLC</th>
+                  <th className="column2">52</th>
+                </tr>
+              </tbody>
             </table>
           </Grid>
-          <Grid className='status-info' item xs={4}>
+          <Grid className="status-info" item xs={4}>
             <table border="1">
-              <caption className='cap-table'>BIẾN TẦN ĐỘ ẨM</caption>
-              <tr>
-                <th className='column1'>Tần số thực</th>
-                <th className='column2'>52</th>
-              </tr>
-              <tr>
-                <th className='column1'>DC BUS</th>
-                <th className='column2'>52</th>
-              </tr>
-              <tr>
-                <th className='column1'>Dòng điện</th>
-                <th className='column2'>52</th>
-              </tr>
+              <caption className="cap-table">BIẾN TẦN ĐỘ ẨM</caption>
+              <tbody>
+                <tr>
+                  <th className="column1">Tần số thực</th>
+                  <th className="column2">52</th>
+                </tr>
+                <tr>
+                  <th className="column1">DC BUS</th>
+                  <th className="column2">52</th>
+                </tr>
+                <tr>
+                  <th className="column1">Dòng điện</th>
+                  <th className="column2">52</th>
+                </tr>
+              </tbody>
             </table>
           </Grid>
         </Grid>

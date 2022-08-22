@@ -6,6 +6,7 @@ import './App.css';
 const Home = React.lazy(() => import('./components/Home'));
 const Chart = React.lazy(() => import('./components/Chart'));
 const About = React.lazy(() => import('./components/About'));
+const Value = React.lazy(() => import('./components/Value'));
 function App() {
   return (
     <Suspense>
@@ -14,6 +15,7 @@ function App() {
           <Route component={Home} path="/" exact />
           <Route component={Chart} path="/chart" />
           <Route component={About} path="/about" />
+          <Route component={Value} path="/value" />
         </Switch>
       </BrowserRouter>
     </Suspense>
