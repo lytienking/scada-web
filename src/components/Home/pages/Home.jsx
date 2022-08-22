@@ -20,7 +20,7 @@ const Home = () => {
       <h1 className="section-title">
         SC<span>A</span>D<span>A</span>
       </h1>
-      <Box sx={{ width: '100%'}}>
+      <Box >
         <Grid  container>
           <Grid item xs={4}>
             <div className="card-big-shadow">

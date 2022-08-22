@@ -1,50 +1,30 @@
-import { useState } from "react";
-import "./Header.scss";
+import banner from '../../../UTBanner.jpg';
+import './Header.scss';
 
 export default function Header() {
-  const [isNavExpanded, setIsNavExpanded] = useState(false);
-
   return (
-    <nav className="navigation">
-      <button
-        className="hamburger"
-        onClick={() => {
-          setIsNavExpanded(!isNavExpanded);
-        }}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          viewBox="0 0 20 20"
-          fill="white"
-        >
-          <path
-            fillRule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </button>
-      <div
-        className={
-          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
-        }
-      >
-        <ul>
-          <li>
-            <a href="/">Scada</a>
-          </li>
-          <li>
-            <a href="/chart">Biểu đồ</a>
-          </li>
-          <li>
-            <a href="/value">Bảng giá trị</a>
-          </li>
-          <li>
-            <a href="/about">Giới thiệu</a>
-          </li>
-        </ul>
+    <div className="header">
+      <div className="banner">
+        <img src={banner} alt="logo" />
       </div>
-    </nav>
+      <nav className="navigation">
+        <div className="navigation-menu expanded">
+          <ul>
+            <li>
+              <a href="/">Scada</a>
+            </li>
+            <li>
+              <a href="/chart">Biểu đồ</a>
+            </li>
+            <li>
+              <a href="/value">Bảng giá trị</a>
+            </li>
+            <li>
+              <a href="/about">Giới thiệu</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   );
 }

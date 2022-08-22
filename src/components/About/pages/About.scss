@@ -1,0 +1,76 @@
+.about {
+  padding: 0 20%;
+}
+.department {
+  text-align: center;
+  color: #21478c;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h3 {
+  text-align: center;
+  color: crimson;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+strong {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+.name {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2rem;
+  color: black;
+}
+.info {
+  margin-top: 30px;
+  width: 500px;
+  margin-left: 40%;
+}
+.teacher {
+  display: flex;
+  .teacher-left {
+    width: 15%;
+  }
+  .teacher-right {
+    margin-top: 3px;
+    width: 85%;
+    font-size: 1.5rem;
+  }
+}
+.student {
+  display: flex;
+  .student-left {
+    padding-top: 20px;
+    width: 15%;
+  }
+  .student-right {
+    margin-top: 3px;
+    width: 85%;
+    font-size: 1.5rem;
+    .lam {
+      display: flex;
+      align-items: center;
+      .lam-left{
+        width: 70%;
+      }
+      .lam-right{
+        width: 30%;
+      }
+    }
+    .vinh {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      .vinh-left{
+        width: 70%;
+      }
+      .vinh-right{
+        width: 30%;
+      }
+    }
+  }
+}
