@@ -31,7 +31,7 @@ const Home = () => {
         SC<span>A</span>D<span>A</span>
       </h1>
       <Box>
-        <Grid container>
+        <Grid style={{paddingLeft:'100px'}} container>
           <Grid item xs={4}>
             <div className="card-big-shadow">
               <div className="card card-just-text" data-background="color" data-color="yellow" data-radius="none">
@@ -71,7 +71,7 @@ const Home = () => {
               </tbody>
             </table>
           </Grid>
-          <Grid item xs={4}>
+          <Grid style={{paddingLeft:'70px'}} item xs={4}>
             <div className="card-big-shadow">
               <div className="card card-just-text" data-background="color" data-color="blue" data-radius="none">
                 <div className="content">

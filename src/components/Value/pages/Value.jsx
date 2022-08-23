@@ -62,7 +62,7 @@ const Value = () => {
       </button>
       <div className="table-value">
         <div className="table-left">
-          <table border="1">
+          <table>
             <caption>Biến tần</caption>
             <thead>
               <tr>
@@ -89,7 +89,7 @@ const Value = () => {
           </table>
         </div>
         <div className="table-right">
-          <table border="1">
+          <table>
             <caption>Hệ thống</caption>
             <thead>
               <tr>

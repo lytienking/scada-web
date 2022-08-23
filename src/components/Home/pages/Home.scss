@@ -20,7 +20,7 @@
 }
 .card-big-shadow {
   max-width: 320px;
-  width: 275px;
+  width: 300px;
   position: relative;
 }
 
@@ -185,9 +185,9 @@ a:focus {
     margin: 0;
     position: absolute;
     top: 50%;
-    left: 26%;
+    left: 39%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 300px;
     height: 60%;
     .column1 {
       width: 40%;
@@ -206,7 +206,7 @@ a:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
+    width: 300px;
     height: 90px;
     .column1 {
       width: 40%;
@@ -216,6 +216,7 @@ a:focus {
       text-align: center;
     }
   }
+  
 }
 .cap-table{
   text-align: center;
