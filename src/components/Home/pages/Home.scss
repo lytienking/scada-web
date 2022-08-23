@@ -80,11 +80,28 @@
 }
 .content-card-tree .temp {
   margin-top: 17px;
+  font-size: 2rem;
+}
+.content-card-tree .temp-alert {
+  margin-top: 17px;
   font-size: 1.5rem;
+  animation: blinker 1s linear infinite;
+  color: red !important;
 }
 .content-card-tree .humidity {
   margin-top: 17px;
+  font-size: 2rem;
+}
+.content-card-tree .humidity-alert {
+  margin-top: 17px;
   font-size: 1.5rem;
+  animation: blinker 1s linear infinite;
+  color: red !important;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 .card .content {
   padding: 20px 20px 10px 20px;
