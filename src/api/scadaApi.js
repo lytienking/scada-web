@@ -9,6 +9,10 @@ const scadaApi = {
     const url = "/system";
     return axiosClient.get(url);
   },
+  getConnect: () => {
+    const url = "/connect";
+    return axiosClient.get(url);
+  },
 };
 
 export default scadaApi;

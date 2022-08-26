@@ -10,7 +10,7 @@ const About = () => {
       <h1 className="department">Khoa: Điện - Điện tử viễn thông</h1>
       <h3>Luận văn tốt nghiệp</h3>
       <p className="name">
-        <strong>Đề tài:</strong> Ứng dụng mạng di động 4G và xử lý ảnh trong chăm sóc cây trông, truyền thông với PLC S7
+        <strong>Đề tài:</strong> Ứng dụng mạng di động 4G và xử lý ảnh trong chăm sóc cây trồng, truyền thông với PLC S7
         - 1200 để điều khiển
       </p>
       <div className="info">
@@ -21,7 +21,7 @@ const About = () => {
             </p>
           </div>
           <div className="teacher-right">
-            <p>TS. Trần Quang Vinh</p>
+            <p>ThS. Trần Quang Vinh</p>
           </div>
         </div>
         <div className="student">

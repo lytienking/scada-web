@@ -8,14 +8,18 @@ import './Home.scss';
 const Home = () => {
   const [inverter, setInverter] = useState({});
   const [system, setSystem] = useState({});
+  const [connect, setConnect] = useState({});
   useEffect(() => {
     const fetchData = async () => {
       const data1 = await ScadaApi.getInverter();
       const data2 = await ScadaApi.getSystem();
+      const data3 = await ScadaApi.getConnect();
       const inverter = _.maxBy(data1, 'createdAt');
       const system = _.maxBy(data2, 'createdAt');
+      const connect = _.maxBy(data3, 'createdAt');
       setInverter(inverter);
       setSystem(system);
+      setConnect(connect);
     };
     fetchData();
     let rotationInterval = setInterval(() => {
@@ -31,7 +35,7 @@ const Home = () => {
         SC<span>A</span>D<span>A</span>
       </h1>
       <Box>
-        <Grid style={{paddingLeft:'100px'}} container>
+        <Grid style={{ paddingLeft: '100px' }} container>
           <Grid item xs={4}>
             <div className="card-big-shadow">
               <div className="card card-just-text" data-background="color" data-color="yellow" data-radius="none">
@@ -41,8 +45,8 @@ const Home = () => {
                     <p className="temp">{system.nhietdo / 100}°C</p>
                   </div>
                   <div className="content-card-tree">
-                    {system.nhietdo < 2500 && <p className="temp-alert">Cảnh báo mức thấp</p>}
-                    {system.nhietdo > 5000 && <p className="temp-alert">Cảnh báo mức cao</p>}
+                    {system.nhietdo < 2000 && <p className="temp-alert">Cảnh báo mức thấp</p>}
+                    {system.nhietdo > 3500 && <p className="temp-alert">Cảnh báo mức cao</p>}
                   </div>
                 </div>
               </div>
@@ -71,7 +75,7 @@ const Home = () => {
               </tbody>
             </table>
           </Grid>
-          <Grid style={{paddingLeft:'70px'}} item xs={4}>
+          <Grid style={{ paddingLeft: '70px' }} item xs={4}>
             <div className="card-big-shadow">
               <div className="card card-just-text" data-background="color" data-color="blue" data-radius="none">
                 <div className="content">
@@ -80,8 +84,8 @@ const Home = () => {
                     <p className="humidity">{system.doam / 100}%</p>
                   </div>
                   <div className="content-card-tree">
-                    {system.doam < 4000 && <p className="humidity-alert">Cảnh báo mức thấp</p>}
-                    {system.doam > 7000 && <p className="humidity-alert">Cảnh báo mức cao</p>}
+                    {system.doam < 6000 && <p className="humidity-alert">Cảnh báo mức thấp</p>}
+                    {system.doam > 9000 && <p className="humidity-alert">Cảnh báo mức cao</p>}
                   </div>
                 </div>
               </div>
@@ -117,15 +121,15 @@ const Home = () => {
               <tbody>
                 <tr>
                   <th className="column1">Rasp - Rasp</th>
-                  <th className="column2">52</th>
+                  <th className="column2">{connect.RR === '1' ? 'Connected' : 'Disconnect'}</th>
                 </tr>
                 <tr>
                   <th className="column1">Rasp - Arduino</th>
-                  <th className="column2">52</th>
+                  <th className="column2">{connect.RA === '1' ? 'Connected' : 'Disconnect'}</th>
                 </tr>
                 <tr>
                   <th className="column1">Rasp - PLC</th>
-                  <th className="column2">52</th>
+                  <th className="column2">{connect.RP === '1' ? 'Connected' : 'Disconnect'}</th>
                 </tr>
               </tbody>
             </table>
