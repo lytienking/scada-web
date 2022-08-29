@@ -144,11 +144,11 @@ const Home = () => {
                 </tr>
                 <tr>
                   <th className="column1">DC BUS</th>
-                  <th className="column2">{inverter.F2}</th>
+                  <th className="column2">{inverter.V2}</th>
                 </tr>
                 <tr>
                   <th className="column1">Dòng điện</th>
-                  <th className="column2">{inverter.F2}</th>
+                  <th className="column2">{inverter.I2}</th>
                 </tr>
               </tbody>
             </table>

@@ -43,7 +43,7 @@ const Value = () => {
           F2: element.F2,
           V2: element.V2,
           I2: element.I2,
-          thoigian: new Date(parseInt(element.createdAt) * 1000).toLocaleDateString(),
+          thoigian: (new Date(parseInt(element.createdAt) * 1000)).toLocaleString(),
         };
         inverter.push(inverterElement);
       });
@@ -54,9 +54,9 @@ const Value = () => {
           mauvang: element.mauvang,
           maudo: element.maudo,
           chieucao: element.chieucao,
-          doam: element.doam,
-          nhietdo: element.nhietdo,
-          thoigian: new Date(parseInt(element.createdAt) * 1000).toLocaleDateString(),
+          doam: element.doam/100,
+          nhietdo: element.nhietdo/100,
+          thoigian: (new Date(parseInt(element.createdAt) * 1000)).toLocaleString(),
         };
         system.push(systemElement);
       });
