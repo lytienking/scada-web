@@ -216,7 +216,20 @@ a:focus {
       text-align: center;
     }
   }
-  
+}
+.time-info{
+  position: relative;
+  table {
+    width: 300px;
+    height: 90px;
+    .column1 {
+      width: 40%;
+    }
+    .column2 {
+      width: 60%;
+      text-align: center;
+    }
+  }
 }
 .cap-table{
   text-align: center;

@@ -10,8 +10,7 @@ const About = () => {
       <h1 className="department">Khoa: Điện - Điện tử viễn thông</h1>
       <h3>Luận văn tốt nghiệp</h3>
       <p className="name">
-        <strong>Đề tài:</strong> Ứng dụng mạng di động 4G và xử lý ảnh trong chăm sóc cây trồng, truyền thông với PLC S7
-        - 1200 để điều khiển
+        <strong>Đề tài:</strong> Ứng dụng mạng di động 4G và công nghệ xử lý ảnh để điều khiển và giám sát hệ thống chăm sóc cây trồng
       </p>
       <div className="info">
         <div className="teacher">

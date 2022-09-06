@@ -155,6 +155,32 @@ const Home = () => {
           </Grid>
         </Grid>
       </Box>
+      <Box sx={{ width: '100%', margin: '0px' }}>
+        <Grid
+          container
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+          style={{ minHeight: '40vh' }}
+        >
+          <Grid className="time-info" item xs={3}>
+            <table border="1">
+              <caption className="cap-table">THỜI GIAN</caption>
+              <tbody>
+                <tr>
+                  <th className="column1">Thời gian bơm 1</th>
+                  <th className="column2">{inverter.tg1}</th>
+                </tr>
+                <tr>
+                  <th className="column1">Thời gian bơm 2</th>
+                  <th className="column2">{inverter.tg2}</th>
+                </tr>
+              </tbody>
+            </table>
+          </Grid>
+        </Grid>
+      </Box>
     </div>
   );
 };
