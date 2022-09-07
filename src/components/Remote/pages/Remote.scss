@@ -1,0 +1,111 @@
+.title {
+  text-align: center;
+  color: #21478c;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.container-remote {
+  padding: 5% 20%;
+  display: flex;
+  width: 100%;
+}
+.remote1 {
+  width: 40%;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+.remote1 button {
+    margin-top: 20px;
+}
+.bulkhead {
+  width: 20%;
+}
+.remote2 {
+  width: 40%;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+.remote2 button {
+    margin-top: 20px;
+}
+.remote1 h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.remote1 .user-box {
+  position: relative;
+}
+
+.remote1 .user-box input {
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.remote1 .user-box label {
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.remote1 .user-box span {
+  color: red;
+}
+.remote1 .user-box input:focus ~ label,
+.remote1 .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #fff;
+  font-size: 12px;
+}
+
+.remote2 h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.remote2 .user-box {
+  position: relative;
+}
+
+.remote2 .user-box input {
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.remote2 .user-box label {
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.remote2 .user-box span {
+  color: red;
+}
+.remote2 .user-box input:focus ~ label,
+.remote2 .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #fff;
+  font-size: 12px;
+}
