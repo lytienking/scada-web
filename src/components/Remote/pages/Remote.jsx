@@ -1,5 +1,6 @@
 import './Remote.scss';
 import { Formik } from 'formik';
+import scadaApi from '../../../api/scadaApi';
 const Remote = () => {
   return (
     <>
@@ -23,11 +24,14 @@ const Remote = () => {
             }
             return errors;
           }}
-          onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 400);
+          onSubmit={ async (values, { setSubmitting }) => {
+            const body = {
+              temp: values.temp,
+              hum: values.hum,
+            }
+            const res = await scadaApi.insertRemote1(body);
+            console.log(res);
+            setSubmitting(false);
           }}
         >
           {({
@@ -81,12 +85,14 @@ const Remote = () => {
             }
             return errors;
           }}
-          onSubmit={(values, { setSubmitting }) => {
-            console.log(values);
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 400);
+          onSubmit={ async (values, { setSubmitting }) => {
+            const body = {
+              yellow: values.yellow,
+              red: values.red,
+            }
+            const res = await scadaApi.insertRemote2(body);
+            console.log(res);
+            setSubmitting(false);
           }}
         >
           {({
@@ -103,13 +109,13 @@ const Remote = () => {
               <h2>Điều khiển 2</h2>
               <form onSubmit={handleSubmit}>
                 <div className="user-box">
-                  <label>Nhiệt độ (5-20)</label>
+                  <label>Màu vàng (5-20)</label>
                   <input type="text" name="yellow" onChange={handleChange} onBlur={handleBlur} value={values.yellow} />
                   <span>{errors.yellow && touched.yellow && errors.yellow}</span>
                 </div>
 
                 <div className="user-box">
-                  <label>Độ ẩm (1-5)</label>
+                  <label>Màu đỏ (1-5)</label>
                   <input type="text" name="red" onChange={handleChange} onBlur={handleBlur} value={values.red} />
                   <span>{errors.red && touched.red && errors.red}</span>
                 </div>

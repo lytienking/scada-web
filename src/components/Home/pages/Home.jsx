@@ -45,8 +45,8 @@ const Home = () => {
                     <p className="temp">{system.nhietdo / 100}°C</p>
                   </div>
                   <div className="content-card-tree">
-                    {system.nhietdo < 2000 && <p className="temp-alert">Cảnh báo mức thấp</p>}
-                    {system.nhietdo > 3500 && <p className="temp-alert">Cảnh báo mức cao</p>}
+                    {system.nhietdo < 1500 && <p className="temp-alert">Cảnh báo mức thấp</p>}
+                    {system.nhietdo > 4000 && <p className="temp-alert">Cảnh báo mức cao</p>}
                   </div>
                 </div>
               </div>
@@ -84,7 +84,7 @@ const Home = () => {
                     <p className="humidity">{system.doam / 100}%</p>
                   </div>
                   <div className="content-card-tree">
-                    {system.doam < 6000 && <p className="humidity-alert">Cảnh báo mức thấp</p>}
+                    {system.doam < 7000 && <p className="humidity-alert">Cảnh báo mức thấp</p>}
                     {system.doam > 9000 && <p className="humidity-alert">Cảnh báo mức cao</p>}
                   </div>
                 </div>
