@@ -1,6 +1,8 @@
 import './Remote.scss';
 import { Formik } from 'formik';
 import scadaApi from '../../../api/scadaApi';
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 const Remote = () => {
   return (
     <>
@@ -30,7 +32,9 @@ const Remote = () => {
               hum: values.hum,
             }
             const res = await scadaApi.insertRemote1(body);
-            console.log(res);
+            if (res[0]) {
+              toast.success("Đã gửi thành công");
+            }
             setSubmitting(false);
           }}
         >
@@ -91,7 +95,9 @@ const Remote = () => {
               red: values.red,
             }
             const res = await scadaApi.insertRemote2(body);
-            console.log(res);
+            if (res[0]) {
+              toast.success("Đã gửi thành công");
+            }
             setSubmitting(false);
           }}
         >
@@ -127,6 +133,7 @@ const Remote = () => {
             </div>
           )}
         </Formik>
+        <ToastContainer />
       </div>
     </>
   );
