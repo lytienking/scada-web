@@ -24,18 +24,18 @@ const Value = () => {
     const fetchData = async () => {
       const data1 = await ScadaApi.getInverter();
       const data2 = await ScadaApi.getSystem();
-      let inverterTop20 = _.sortBy(data1, [
+      let inverterTop100 = _.sortBy(data1, [
         function (o) {
           return o.createdAt;
         },
-      ]).slice(data1.length - 20, data1.length);
-      let systemTop20 = _.sortBy(data2, [
+      ]).slice(data1.length - 100, data1.length);
+      let systemTop100 = _.sortBy(data2, [
         function (o) {
           return o.createdAt;
         },
-      ]).slice(data2.length - 20, data2.length);
+      ]).slice(data2.length - 100, data2.length);
       let inverter = [];
-      inverterTop20.forEach((element) => {
+      inverterTop100.forEach((element) => {
         const inverterElement = {
           F1: element.F1,
           V1: element.V1,
@@ -48,7 +48,7 @@ const Value = () => {
         inverter.push(inverterElement);
       });
       let system = [];
-      systemTop20.forEach((element) => {
+      systemTop100.forEach((element) => {
         const systemElement = {
           mauxanh: element.mauxanh,
           mauvang: element.mauvang,
